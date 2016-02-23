@@ -19,16 +19,40 @@
 
   <link rel="canonical" href="https://www.bit.ly/caltrash" />
 </head>
+
 <body>
   <main>
     <h1>Report to Caltrans</h1>
-    <h2>980 Eastbound in Oakland</h2>
+    <h2>980 in Oakland</h2>
     <form action="http://www.dot.ca.gov/hq/maint/msrsubmit/" id="msrform" method="post">
       <input type='hidden' name='county' value='Alameda' />
       <input type='hidden' name='rte' value='980' />
-      <input type='hidden' name='dirTravel' value='Eastbound' />
+      <input type='hidden' name='dirTravel' id='dir_travel' value='Eastbound' />
       <input type='hidden' name='entityName' value='Oakland' />
-      <input name='crossStreet' value='15th St'>
+      <div class='intersection'>
+        <select id='main_street'>
+          <option value='CASTRO'>Castro St.</option>
+          <option value='BRUSH'>Brush St.</option>
+        </select>
+        <div class="and">&amp;</div>
+        <select name='crossStreet'>
+          <option value='7th'>7th</option>
+          <option value='8th'>8th</option>
+          <option value='9th'>9th</option>
+          <option value='10th'>10th</option>
+          <option value='11th'>11th</option>
+          <option value='12th'>12th</option>
+          <option value='13th'>13th</option>
+          <option value='14th'>14th</option>
+          <option value='15th' selected>15th</option>
+          <option value='16th'>16th</option>
+          <option value='17th'>17th</option>
+          <option value='18th'>18th</option>
+          <option value='19th'>19th</option>
+          <option value='Thomas L. Berkley'>Thomas L. Berkley</option>
+          <option value='San Pablo Ave'>San Pablo Ave</option>
+        </select>
+      </div>
       <input type='hidden' name='transMode' value='Car'>
       <input type='hidden' name='situationNoticedTime' value='1 pm - 2 pm'>
       <select name="typeDesc">
@@ -43,10 +67,27 @@
         <option value="OTH">Other</option>
         <option value="SDW">Soundwall - Down or Damaged</option>
       </select>
-      <textarea name='situationDesc' maxlength='500'>Furniture and bags of trash</textarea>
-      <textarea name='situationGeoLoc' maxlength='500'>The Caltrans-owned median between Castro Street and the Freeway</textarea>
+      <textarea name='situationDesc' maxlength='500' placeholder="Furniture and bags of trash"></textarea>
+      <textarea name='situationGeoLoc' maxlength='500'>The Caltrans-owned median between the street and the freeway</textarea>
       <input name='custEmail' placeholder="email@domain.com" />
       <input type="submit" />
     </form>
   </main>
 </body>
+
+<script>
+var CASTRO = ['7th', '8th', '9th', '10th', '11th', '12th', '13th', '14th', '15th', '16th', '17th', '18th', '19th', 'Thomas L. Berkley', 'San Pablo Ave']
+var NORTHGATE = ['23rd', '24th', '25th', 'Sycamore', '27th']
+var BRUSH = CASTRO;
+
+var mainStreetSelector = document.getElementById('main_street');
+var dirTravel = document.getElementById('dir_travel');
+
+mainStreetSelector.addEventListener('change', function(event) {
+  if(event.target.value == 'BRUSH') {
+    dirTravel.value = 'Westbound'
+  } else {
+    dirTravel.value = 'Eastbound'
+  }
+});
+</script>

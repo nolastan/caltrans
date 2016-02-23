@@ -13,3 +13,17 @@ input, textarea, select {
   width: 100%;
   font-size: 150%;
 }
+
+.intersection {
+  display: flex;
+  margin: 2ex 0;
+}
+
+.intersection select {
+  flex: 3;
+  margin: 0;
+}
+.intersection .and {
+  flex: 0 0 2em;
+  text-align: center;
+}
