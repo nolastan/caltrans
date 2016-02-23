@@ -1,27 +1,36 @@
-<h1>Report to Caltrans</h1>
-<h2>980 Eastbound in Oakland</h2>
-<form action="http://www.dot.ca.gov/hq/maint/msrsubmit/" id="msrform" method="post">
-  <input type='hidden' name='county' value='Alameda' />
-  <input type='hidden' name='rte' value='980' />
-  <input type='hidden' name='dirTravel' value='Eastbound' />
-  <input type='hidden' name='entityName' value='Oakland' />
-  <input name='crossStreet' value='15th St'>
-  <input type='hidden' name='transMode' value='Car'>
-  <input type='hidden' name='situationNoticedTime' value='1 pm - 2 pm'>
-  <select name="typeDesc">
-    <option value="CSC">Curb and Sidewalk - Cracked or Broken</option>
-    <option value="FAA">Fencing - Missing or Damaged</option>
-    <option value="GRA">Graffiti</option>
-    <option value="IDP" selected>Illegal Dumping</option>
-    <option value="LDS">Landscaping - Broken Sprinkler</option>
-    <option value="LDT">Landscaping - Weeds, Trees, Brush</option>
-    <option value="LTD">Litter - Trash and Debris</option>
-    <option value="LSB">Litter - Unauthorized Signs, Banners or Posters</option>
-    <option value="OTH">Other</option>
-    <option value="SDW">Soundwall - Down or Damaged</option>
-  </select>
-  <textarea name='situationDesc' maxlength='500'>Furniture and bags of trash</textarea>
-  <textarea name='situationGeoLoc' maxlength='500'>The Caltrans-owned median between Castro Street and the Freeway</textarea>
-  <input name='custEmail' placeholder="email@domain.com" />
-  <input type="submit" />
-</form>
+<head>
+  <title>Cal Trash</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:600,300' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='main.css' />
+</head>
+<body>
+  <main>
+    <h1>Report to Caltrans</h1>
+    <h2>980 Eastbound in Oakland</h2>
+    <form action="http://www.dot.ca.gov/hq/maint/msrsubmit/" id="msrform" method="post">
+      <input type='hidden' name='county' value='Alameda' />
+      <input type='hidden' name='rte' value='980' />
+      <input type='hidden' name='dirTravel' value='Eastbound' />
+      <input type='hidden' name='entityName' value='Oakland' />
+      <input name='crossStreet' value='15th St'>
+      <input type='hidden' name='transMode' value='Car'>
+      <input type='hidden' name='situationNoticedTime' value='1 pm - 2 pm'>
+      <select name="typeDesc">
+        <option value="CSC">Curb and Sidewalk - Cracked or Broken</option>
+        <option value="FAA">Fencing - Missing or Damaged</option>
+        <option value="GRA">Graffiti</option>
+        <option value="IDP" selected>Illegal Dumping</option>
+        <option value="LDS">Landscaping - Broken Sprinkler</option>
+        <option value="LDT">Landscaping - Weeds, Trees, Brush</option>
+        <option value="LTD">Litter - Trash and Debris</option>
+        <option value="LSB">Litter - Unauthorized Signs, Banners or Posters</option>
+        <option value="OTH">Other</option>
+        <option value="SDW">Soundwall - Down or Damaged</option>
+      </select>
+      <textarea name='situationDesc' maxlength='500'>Furniture and bags of trash</textarea>
+      <textarea name='situationGeoLoc' maxlength='500'>The Caltrans-owned median between Castro Street and the Freeway</textarea>
+      <input name='custEmail' placeholder="email@domain.com" />
+      <input type="submit" />
+    </form>
+  </main>
+</body>
