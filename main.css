@@ -26,4 +26,5 @@ input, textarea, select {
 .intersection .and {
   flex: 0 0 2em;
   text-align: center;
+  font-size: 150%;
 }
