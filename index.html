@@ -29,6 +29,9 @@
       <input type='hidden' name='rte' value='980' />
       <input type='hidden' name='dirTravel' id='dir_travel' value='Eastbound' />
       <input type='hidden' name='entityName' value='Oakland' />
+      <input type='hidden' name='transMode' value='Car'>
+      <input type='hidden' name='situationNoticedTime' value='1 pm - 2 pm'>
+
       <div class='intersection'>
         <select id='main_street'>
           <option value='CASTRO'>Castro St.</option>
@@ -53,8 +56,6 @@
           <option value='San Pablo Ave'>San Pablo Ave</option>
         </select>
       </div>
-      <input type='hidden' name='transMode' value='Car'>
-      <input type='hidden' name='situationNoticedTime' value='1 pm - 2 pm'>
       <select name="typeDesc">
         <option value="CSC">Curb and Sidewalk - Cracked or Broken</option>
         <option value="FAA">Fencing - Missing or Damaged</option>
@@ -69,7 +70,7 @@
       </select>
       <textarea name='situationDesc' maxlength='500' placeholder="Furniture and bags of trash"></textarea>
       <textarea name='situationGeoLoc' maxlength='500'>The Caltrans-owned median between the street and the freeway</textarea>
-      <input name='custEmail' placeholder="email@domain.com" />
+      <input name='custEmail' type='email' placeholder="email@domain.com" />
       <input type="submit" />
     </form>
   </main>
